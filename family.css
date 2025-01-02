@@ -1,0 +1,218 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('image/bgpic.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color:rgb(161, 92, 26);
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 60px; 
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: rgb(247, 244, 96);
+        }
+
+        h1 {
+            font-size: 50px; 
+            font-weight: bold; 
+        }
+
+        p {
+            text-align: justify; 
+            font-size: 20px; 
+            line-height: 35px;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 100px; 
+        }
+
+        .container1 {
+            gap: 10px;
+            padding-top: 50px;
+            padding-left: 150px;
+            padding-right: 150px;
+            margin: none; 
+            background-color: rgba(236, 213, 143, 0.486);
+            border-radius: none;
+            align-items: center;
+            justify-items: center; 
+            place-items: center; 
+        }
+
+        .image {
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .image:hover {
+            transform: scale(1.1); 
+            transition: transform 0.5s ease-in-out; 
+        }
+
+        #audio-control {
+            position: fixed;
+            top: 60px; 
+            right: 10px;
+            background-color: black; 
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #audio-control:hover {
+            background-color: black; 
+        }
+
+        .slider {
+            position: relative;
+            max-width: 600px;
+            height: 350px; 
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5; 
+            border-radius: 20px; 
+        }
+
+        .slider-images img {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+            transition: opacity 1s ease;
+        }
+
+        .slider-images img:first-child {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 1px;
+        }
+
+        .next {
+            right: 1px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 30px; 
+            right: 1%;
+            transform: translateX(-50%); 
+            padding: 10px 25px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: 2px solid #9cfa9c;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #9cfa9c;
+            color: #333;
+        }
+
+        .custom-marker {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .custom-marker ul {
+            list-style: none;
+            padding-left: 40px;
+        }
+
+        .custom-marker li {
+            margin-bottom: 10px;
+            position: relative; 
+            padding-left: 30px; 
+            transition: transform 0.3s ease;
+        }
+
+        .custom-marker li:hover {
+            transform: scale(1.05);
+        }
+
+        .custom-marker li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.2em; 
+            width: 30px; 
+            height: 30px; 
+            background: url('image/yoll.jpg') no-repeat center center;
+            background-size: cover; 
+        }
+
+        footer {
+            background-color: #3333339a;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            text-decoration: none;
+            font-weight: bold;
+        }

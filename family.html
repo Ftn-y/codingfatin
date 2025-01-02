@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <link rel="stylesheet" href="family.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about_me.html">ABOUT ME</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="family.html">FAMILY</a>
+            <a href="hobby.html">HOBBY</a>
+            <a href="album.html">ALBUM</a>
+        </nav>
+    </header>
+
+    <audio id="bg-audio" loop preload="auto">
+        <source src="music/song.mp3" type="audio/mp3">
+    </audio>
+
+    <button id="audio-control">
+        &#9658; 
+    </button>
+
+    <div class="content">
+        <h1 style="font-family:verdana;">My Beloved Family 💖</h1><br>
+        <div class="container1">
+            <div class="slider">
+                <div class="slider-images">
+                    <img src="image/fam1.jpg" alt="Family Photo 1" class="image">
+                    <img src="image/fam5.jpg" alt="Family Photo 5" class="image">
+                    <img src="image/fam2.jpg" alt="Family Photo 2" class="image">
+                    <img src="image/fam3.jpg" alt="Family Photo 3" class="image">
+                    <img src="image/fam6.jpg" alt="Family Photo 6" class="image">
+                    <img src="image/fam7.jpg" alt="Family Photo 7" class="image">
+                    <img src="image/fam8.jpg" alt="Family Photo 8" class="image">
+                    <img src="image/fam9.jpg" alt="Family Photo 9" class="image">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div><br><br>
+           
+            <p>Family is my everything! Here are the moments and reasons that make my family so special:</p>
+            
+            <div class="custom-marker">
+                <ul>
+                    <li>They are my strongest supporters through thick and thin. 🛡️</li>
+                    <li>They celebrate every success with as much joy as I do. 🎉</li>
+                    <li>They know how to turn tough days into moments of laughter. 😄</li>
+                    <li>They are my safe space, my heart's home. 🏠</li>
+                    <li>With them, life feels like an adventure full of love. 🌈</li>
+                </ul>
+            </div><br>
+            <p>
+                No matter where life takes me, I carry their love as my strength. <span class="animated-heart">❤️</span> 
+                You are my world, my endless blessing, and my greatest treasure. Thank you for being my everything! 💕
+            </p>
+        </div><br>
+    </div>
+
+    <script>
+        var audio = document.getElementById('bg-audio');
+        var audioControl = document.getElementById('audio-control');
+
+        var isPlaying = false; 
+        audioControl.innerHTML = "&#9658;"; 
+
+        audioControl.addEventListener('click', function() {
+            if (!isPlaying) {
+                audio.play();
+                audioControl.innerHTML = "&#10074;&#10074;"; 
+                isPlaying = true;
+            } else {
+                audio.pause();
+                audioControl.innerHTML = "&#9658;"; 
+                isPlaying = false;
+            }
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slider-images img");
+
+        function changeSlide(direction) {
+            slides[currentSlide].style.display = "none";
+            slides[currentSlide].style.opacity = "0";
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].style.display = "block";
+            setTimeout(() => slides[currentSlide].style.opacity = "1", 50); 
+        }
+    </script>
+
+    <a href="index.html" class="home-button">Home</a>
+
+    <footer>
+        © 2024 𝓕𝓪𝓽𝓲𝓷'𝓼 𝓼𝓲𝓽𝓮𝓼♥. All rights <sub>reserved.</sub> 
+        Designed with ❤️ by <sup>𝓕𝓪𝓽𝓲𝓷.</sup>
+    </footer>
+    
+</body>
+</html>

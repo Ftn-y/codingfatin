@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby</title>
+    <link rel="stylesheet" href="hobby.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about_me.html">ABOUT ME</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="family.html">FAMILY</a>
+            <a href="hobby.html">HOBBY</a>
+            <a href="album.html">ALBUM</a>
+        </nav>
+    </header>
+
+    <audio id="bg-audio" loop preload="auto">
+        <source src="music/song4.mp3" type="audio/mp3">
+    </audio>
+
+    <button id="audio-control">
+        &#9658; 
+    </button>
+
+    <div class="content">
+        <h1 style="font-family:verdana;">Cooking 🍽️👩‍🍳</h1><br>
+        <div class="container1">
+            <ol class="food-menu">
+                <li>
+                    <img src="image/begedil.jpg" alt="Tauhu Begedil" class="food-image"><br>
+                    <span class="food-name">1.Tauhu Begedil</span>
+                </li>
+                <li>
+                    <img src="image/nasilemak.jpg" alt="Nasi Lemak" class="food-image"><br>
+                    <span class="food-name">2. Nasi Lemak</span>
+                </li>
+                <li>
+                    <img src="image/lunch.jpg" alt="lunch" class="food-image"><br>
+                    <span class="food-name">3. Lunch</span>
+                </li>
+            </ol>
+            <ol class="food-menu">
+                <li>
+                    <img src="image/pasta.jpg" alt="Creamy Pasta" class="food-image"><br>
+                    <span class="food-name">4. Creamy Pasta</span>
+                </li>
+                <li>
+                    <img src="image/ikankeli.jpg" alt="Ikan Keli Berlado" class="food-image"><br>
+                    <span class="food-name">5. Ikan Keli Berlado</span>
+                </li>
+                <li>
+                    <img src="image/grill.jpg" alt="Grill" class="food-image"><br>
+                    <span class="food-name">6. Grill</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 style="font-family:verdana;">Baking 🍽️👩‍🍳</h1><br>
+        <div class="container1">
+            <ol class="food-menu">
+                <li>
+                    <img src="image/bake.jpg" alt="Chocolate Cake" class="food-image"><br>
+                    <span class="food-name">1. Chocolate Cake</span>
+                </li>
+                <li>
+                    <img src="image/bake2.jpg" alt="Cheese Cake" class="food-image"><br>
+                    <span class="food-name">2. Cheese Cake</span>
+                </li>
+                <li>
+                    <img src="image/bake3.jpg" alt="Cheesekut" class="food-image"><br>
+                    <span class="food-name">3. Cheesekut</span>
+                </li>
+            </ol>
+        </div>
+
+        <div class="content">
+            <h1 style="font-family:verdana;">Food Hunting 🍽️</h1><br>
+            <div class="container1">
+                <ol class="food-menu">
+                    <li>
+                        <img src="image/food.jpg" alt="NakNak" class="food-image"><br>
+                        <span class="food-name">1. NakNak</span>
+                    </li>
+                    <li>
+                        <img src="image/food2.jpg" alt="Opah Strawberry" class="food-image"><br>
+                        <span class="food-name">2. Opah Strawberry</span>
+                    </li>
+                    <li>
+                        <img src="image/food3.jpg" alt="Lepak Corner" class="food-image"><br>
+                        <span class="food-name">3. Lepak Corner</span>
+                    </li>
+                </ol>
+                <ol class="food-menu">
+                    <li>
+                        <img src="image/food4.jpg" alt="Boat Noodle" class="food-image"><br>
+                        <span class="food-name">4. Boat Noodle</span>
+                    </li>
+                    <li>
+                        <img src="image/food5.jpg" alt="Tea Garden" class="food-image"><br>
+                        <span class="food-name">5. Tea garden</span>
+                    </li>
+                    <li>
+                        <img src="image/food6.jpg" alt="Rumah Kopi" class="food-image"><br>
+                        <span class="food-name">6. Rumah Kopi 38</span>
+                    </li>
+                </ol>
+                <ol class="food-menu">
+                    <li>
+                        <img src="image/food7.jpg" alt="Suki-ya" class="food-image"><br>
+                        <span class="food-name">7. Suki-ya</span>
+                    </li>
+                    <li>
+                        <img src="image/food8.jpg" alt="Molten" class="food-image"><br>
+                        <span class="food-name">8. Molten</span>
+                    </li>
+                    <li>
+                        <img src="image/food9.jpg" alt="Torigen" class="food-image"><br>
+                        <span class="food-name">9. Torigen</span>
+                    </li>
+                </ol>
+            </div>
+
+    <script>
+        var audio = document.getElementById('bg-audio');
+        var audioControl = document.getElementById('audio-control');
+
+        var isPlaying = false; 
+        audioControl.innerHTML = "&#9658;"; 
+
+        audioControl.addEventListener('click', function() {
+            if (!isPlaying) {
+                audio.play();
+                audioControl.innerHTML = "&#10074;&#10074;"; 
+                isPlaying = true;
+            } else {
+                audio.pause();
+                audioControl.innerHTML = "&#9658;"; 
+                isPlaying = false;
+            }
+        });
+    </script>
+
+    <a href="index.html" class="home-button">Home</a>
+
+    <footer>
+        © 2024 𝓕𝓪𝓽𝓲𝓷'𝓼 𝓼𝓲𝓽𝓮𝓼♥. All rights <sub>reserved.</sub> 
+        Designed with ❤️ by <sup>𝓕𝓪𝓽𝓲𝓷.</sup>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Fatin</title>
+    <link rel="stylesheet" href="about_me.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about_me.html">ABOUT ME</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="family.html">FAMILY</a>
+            <a href="hobby.html">HOBBY</a>
+            <a href="album.html">ALBUM</a>
+        </nav>
+    </header>
+
+    <audio id="bg-audio" loop preload="auto">
+        <source src="music/song2.mp3" type="audio/mp3">
+    </audio>
+
+    <button id="audio-control">
+        &#9658; 
+    </button>
+
+    <div class="content">
+        <h1 style="font-family:verdana;">Let's dive deeper to</h1> 
+        <h1 style="font-family:verdana;">know more about me✨</h1><br>
+
+        <div class="profile-container">
+            <img src="image/yoll.jpg" alt="My Picture" class="profile-picture">
+        </div><br>
+
+        <section id="button">
+            <div class="buttons-container">
+                <a href="#skill" class="button">Skills</a>
+                <a href="#workexperience" class="button">Work Experiences</a>
+                <a href="#socialmedia" class="button">Social Media</a>
+                </div>
+        </section><br><br><br><br><br>
+
+        <div id="skill" class="container1">
+            <br><h1>My Skills</h1><br>
+            
+            <div class="skill-container">
+                <div class="skill-item">
+                    <h2>♡ Teamwork and Leadership ♡</h2>
+                    <ul>
+                        <li>Collaborating with teams in high-pressure environments</li>
+                        <li>Leading and organizing tasks for group success</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-item">
+                    <h2>♡ Digital Tools Proficiency ♡</h2>
+                    <ul>
+                        <li>Proficient in Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                        <li>Skilled in Canva for graphic design and layouts</li>
+                        <li>Basic understanding of social media management</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-item">
+                    <h2>♡ Problem Solving and Adaptability ♡</h2>
+                    <ul>
+                        <li>Handling unexpected changes</li>
+                        <li>Creative thinking to overcome logistical challenges</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-item">
+                    <h2>♡ Time Management ♡ </h2>
+                    <ul>
+                        <li>Prioritizing and completing multiple tasks effectively</li>
+                        <li>Meeting deadlines for events, publications, and advertising campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="content">
+        <div id="workexperience" class="container5">
+            <br><h1>My Work Experiences</h1><br><br>
+                <p>
+                    I interned at Institut Latihan Perindustrian Pasir Gudang, where I assisted in organizing events like the Career Fair and Johor Smart City Day 2024. My responsibilities included supporting event logistics and collaborating with staff to ensure smooth operations. This experience helped me improve my skills in event coordination and teamwork.
+                </p>
+                <div class="work-images">
+                    <img src="image/work1.jpg" alt="Work Experience 1" class="work-image">
+                    <img src="image/work2.jpg" alt="Work Experience 2" class="work-image">
+                </div>
+        </div><br><br><br><br>
+
+        <div id="socialmedia" class="container4"><br>
+            <h1>My Social Media</h1>
+            <div class="container3">
+                <p>
+                    Stay connected and be part of my exciting journey! Follow me on Instagram for snapshots of my daily adventures and heartfelt moments, and don’t forget to check out my TikTok for fun, creative snippets that’ll brighten your day. Let’s share smiles, stories, and lots of joy together! 🌟✨            
+                </p>
+            </div>
+            <div class="container2">
+                <div>
+                    <a href="mailto:fatinyoll@gmail.com" target="_blank">
+                        <img src="image/emailogo.png" alt="Email Logo" class="image2">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/ftn.yoll" target="_blank">
+                        <img src="image/instalogo.png" alt="Instagram Logo" class="image2">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.tiktok.com/@ftn.yoll" target="_blank">
+                        <img src="image/tiktoklogo.png" alt="TikTok Logo" class="image2">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var audio = document.getElementById('bg-audio');
+        var audioControl = document.getElementById('audio-control');
+
+        var isPlaying = false; 
+        audioControl.innerHTML = "&#9658;"; 
+
+        audioControl.addEventListener('click', function() {
+            if (!isPlaying) {
+                audio.play();
+                audioControl.innerHTML = "&#10074;&#10074;"; 
+                isPlaying = true;
+            } else {
+                audio.pause();
+                audioControl.innerHTML = "&#9658;"; 
+                isPlaying = false;
+            }
+        });
+    </script>
+
+    <a href="index.html" class="home-button">Home</a>
+
+    <footer>
+        © 2024 𝓕𝓪𝓽𝓲𝓷'𝓼 𝓼𝓲𝓽𝓮𝓼♥. All rights <sub>reserved.</sub> 
+        Designed with ❤️ by <sup>𝓕𝓪𝓽𝓲𝓷.</sup>
+    </footer>
+
+</body>
+</html>
